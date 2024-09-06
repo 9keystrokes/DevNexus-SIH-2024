@@ -1,96 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main_styles.css">
+
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <h1>Alum Connect</h1>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" class="sign-in-btn">Download Our App</a>
+            <a href="login.html" class="sign-in-btn">Sign Up Now</a>
+        </div>
+    </nav>
+    <br>
+    <div>
+        <center>
+            <img src="photos/logoHD.png" width="800" height="500" />
+        </center>
+    </div>
+
+    <div class="content">
+        <h2>Welcome to Our Website</h2>
+        <h3>Services Provided By Us</h3>
+        <div class="flex-container">
+            <div class="flex-item item1">
+                <div class="description">Announcements : <br><br>
+                    Stay updated with live announcements on reunions, alumni success stories, upcoming workshops, guest
+                    lectures, and college events. Get notified about how alumni can participate in these occasions,
+                    fostering a strong, connected community.
+                </div>
+                <div class="image"></div>
+            </div>
+            <div class="flex-item item2">
+                <div class="image"></div>
+                <div class="description">Networking Hub : <br><br>
+                    Our platform enables alumni to connect with fellow graduates, share professional achievements, job
+                    promotions, and opportunities. Whether you're looking for referrals, relocating to a new city, or
+                    seeking like-minded individuals to launch a startup, our hub has you covered.
+                </div>
+            </div>
+            <div class="flex-item item3">
+                <div class="description">Guidance and Mentorship : <br><br>
+                    Students can access personalized guidance from alumni through secure, encrypted messages. Whether
+                    it's career advice or general mentorship, alumni can help students in a safe and supportive
+                    environment, promoting mental wellness.
+                </div>
+                <div class="image"></div>
+            </div>
+            <div class="flex-item item4">
+                <div class="image"></div>
+                <div class="description">Profiling and Smart Searches :<br><br>
+                    Users can update their profiles with professional details, making it easier for others to find them
+                    using smart AI based search filters. Search by company, job title, field of expertise, or location,
+                    and connect with
+                    peers or mentors.
+                </div>
+            </div>
+            <div class="flex-item item5">
+                <div class="description">Community Building :
+                    <br><br>
+                    Join or create discussion communities based on professional fields, companies, or interests. Alumni
+                    can address common questions from students, offer resume reviews, and engage in productive
+                    discussions on a interactive board. Our resume review community is led by elected alumni.
+                </div>
+                <div class="image"></div>
+            </div>
+            <div class="flex-item item6">
+                <div class="image"></div>
+                <div class="description">Donations :
+                    <br><br>
+                    Support your alma mater through our secure, government-backed donation portal with tax exemptions.
+                    You can also raise funds for startups or find investors, empowering future innovators.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="horizontal-heading">
+        <center>
+            <h2> AlumConnect is Trusted by Top Institutions</h2>
+        </center>
+            <div class="horizontal-container">
+                <div class="horizontal-item">
+                    <img src="photos/image1.jpg" width="200" height="200">
+                    <p>College XYZ</p>
+                </div>
+                <div class="horizontal-item">
+                    <img src="photos/iiitn logo.png" width="200" height="200">
+                    <p>IIIT Nagpur</p>
+                </div>
+                <div class="horizontal-item">
+                    <img src="photos/image3.jpg" width="200" height="200">
+                    <p>College ABC</p>
+                </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-content">
+            <h3>Contact Us</h3>
+            <p>Email: alumconnect@gmail.com</p>
+            <p>Phone: (123) 456-7890</p>
+
+            <div class="social-media">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <ul class="quick-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+
+            <p>&copy; 2024 AlumConnect. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
 </html>

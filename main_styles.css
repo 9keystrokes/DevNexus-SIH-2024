@@ -1,0 +1,323 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Updated to Poppins font */
+    background-color: #f5efff; /* Light background color */
+    margin: 0;
+    padding-top: 80px; /* Adjust for fixed navbar height */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Sticky Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #7371fc; /* Main background color for navbar */
+    padding: 15px 30px; /* Adjust padding for proper spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensures it stays above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for better visibility */
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Ensure the navigation container is not too wide for the page */
+nav .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between nav items */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.logo h1 {
+    color: white; /* White text for the logo */
+    font-weight: 600; /* Bolder logo font */
+    margin: 0; /* Ensure no extra margin */
+}
+
+/* Wrapper for nav-links and sign-in button */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between nav links and buttons */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Adds space between nav items */
+    margin: 0;
+}
+
+.nav-links li {
+    position: relative; /* Necessary for the hover content box */
+    margin: 0; /* Removes any extra margins */
+}
+
+.nav-links a {
+    color: white; /* White text for links */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #cdc1ff; /* Hover color for links */
+}
+
+/* Hover Content Box Styling */
+.nav-links li .hover-box {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Below the link */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    z-index: 1001; /* Ensure it appears above other content */
+    width: auto; /* Variable size based on content */
+    min-width: 150px; /* Ensures it's not too narrow */
+    max-width: 300px; /* Optional: Prevents it from getting too wide */
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Show the hover box when hovering over a link */
+.nav-links li:hover .hover-box {
+    display: block;
+}
+
+.sign-in-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #a594f9; /* Background for Sign In button */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.sign-in-btn:hover {
+    background-color: #7371fc; /* Darker hover color for button */
+}
+
+/* Content section styling */
+.content {
+    background-color: #e5d9f2; /* Light background for content */
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    flex: 1; /* Allow content to expand and push footer down */
+}
+
+/* Flexbox container for vertical items */
+.flex-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Space between items */
+}
+
+/* Individual item styling */
+.flex-item {
+    display: flex;
+    width: 100%;
+    background-color: #e5d9f2; /* Box background color */
+    border-radius: 5px;
+    overflow: hidden; /* Hide overflow content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.flex-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.flex-item:nth-child(even) .description {
+    order: 2; /* Place description on the right */
+}
+
+.flex-item:nth-child(even) .image {
+    order: 1; /* Place image on the left */
+}
+
+.description {
+    flex: 1; /* Takes up half the width */
+    color: black;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500; /* Make the text a bit bolder */
+}
+
+.image {
+    flex: 1; /* Takes up half the width */
+    background-size: cover;
+    background-position: center;
+    height: 200px; /* Set a fixed height for the image section */
+}
+
+/* Footer styling */
+footer {
+    background-color: #e5d9f2; /* Footer background color */
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content h3 {
+    margin: 0 0 10px;
+    font-weight: 600; /* Bolder for headers */
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-weight: 400; /* Normal weight for paragraphs */
+}
+
+.social-media {
+    margin: 10px 0;
+}
+
+.social-media a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.social-media a:hover {
+    color: #cdc1ff; /* Hover color for social media links */
+}
+
+.quick-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.quick-links li {
+    margin: 5px 0;
+}
+
+.quick-links a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.quick-links a:hover {
+    color: #cdc1ff; /* Hover color for quick links */
+}
+
+/* Vertical section container */
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add some spacing between the sections */
+}
+
+.vertical-item {
+    background-color: #e5d9f2;
+    padding: 20px;
+    border-radius: 8px;
+    width: auto;
+    height: auto;
+}
+
+.vertical-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+/* Add background color to the new section */
+.new-section {
+    background-color: #e5d9f2; /* Light background color */
+    padding: 40px 0; /* Padding around the section */
+}
+
+/* Flexbox container for horizontal items */
+.horizontal-container {
+    display: flex;
+    justify-content: space-between; /* Align items with space between them */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 20px; /* Add space between blocks */
+    margin-top: 20px;
+    overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
+}
+
+/* Individual blocks styling */
+.horizontal-item {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    flex: 0 0 30%; /* Prevent resizing, make each block 30% of the container */
+    background-color: #e5d9f2; /* Same background as the section above */
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+    padding: 15px;
+    text-align: center;
+}
+
+/* Hover effect for the blocks */
+.horizontal-item:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Image styling */
+.horizontal-item img {
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover; /* Ensure image fits without distortion */
+    margin-bottom: 15px;
+}
+
+/* Text description below the image */
+.horizontal-item p {
+    font-weight: 500; /* Make the text bold */
+    color: black;
+    margin: 0;
+}
+
+/* Centered heading above the image blocks */
+.horizontal-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.horizontal-heading h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    padding-bottom: 10px;
+    display: inline-block;
+}
