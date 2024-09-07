@@ -74,33 +74,61 @@ nav .nav-right {
     color: #cdc1ff; /* Hover color for links */
 }
 
-/* Hover Content Box Styling */
+
 .nav-links li .hover-box {
     display: none; /* Initially hidden */
     position: absolute;
-    top: 100%; /* Below the link */
+    top: 100%; /* Positioned just below the link */
     left: 50%;
     transform: translateX(-50%);
-    background-color: #ffffff;
-    color: black;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    white-space: nowrap;
+    background-color: #a594f9; /* Updated background color to match website */
+    color: white; /* White text for better contrast */
+    padding: 15px; /* Increased padding for readability */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for better visibility */
     z-index: 1001; /* Ensure it appears above other content */
-    width: auto; /* Variable size based on content */
-    min-width: 150px; /* Ensures it's not too narrow */
-    max-width: 300px; /* Optional: Prevents it from getting too wide */
-    text-align: center;
+    text-align: left; /* Left-aligned text for better readability */
     font-size: 14px;
     font-weight: 400;
+    width: 90vw; /* Takes up 90% of the viewport width for larger content */
+    max-width: 600px; /* Limits width for better readability */
+    max-height: 300px; /* Restrict height to avoid taking up too much space */
+    overflow-y: auto; /* Enable vertical scrolling if the content exceeds the max height */
+    word-wrap: break-word; /* Ensures content wraps to new lines as needed */
+    white-space: normal; /* Allows text to wrap onto multiple lines */
 }
+nav {
+    overflow: visible; /* Ensure the hover box isn't hidden by the navbar */
+}
+
+
+/* Show the hover box when hovering over the "About" or "Contact" link */
+.nav-links li:hover .hover-box {
+    display: block;
+}
+
+/* Specific hover box content for About and Contact */
+.nav-links .about-link .hover-box {
+    content: "Learn more about our team and mission!";
+}
+
+.nav-links .contact-link .hover-box {
+    content: "Get in touch with us for any inquiries!";
+}
+
 
 /* Show the hover box when hovering over a link */
 .nav-links li:hover .hover-box {
     display: block;
 }
+/* Specific hover box content for About and Contact */
+.nav-links .about-link .hover-box {
+    content: "Learn more about our team and mission!";
+}
 
+.nav-links .contact-link .hover-box {
+    content: "Get in touch with us for any inquiries!";
+}
 .sign-in-btn {
     text-decoration: none;
     color: white;
