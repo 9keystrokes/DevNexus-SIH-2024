@@ -96,6 +96,11 @@ img.avatar {
 
 
 @media screen and (max-width: 768px) {
+
+
+    
+
+
     .split {
         width: 100%;
     }
@@ -107,7 +112,7 @@ img.avatar {
     .form-container {
         width: 100%;
         left: 0;
-        padding: 16px;
+        padding: 40px;
     }
 }
 
