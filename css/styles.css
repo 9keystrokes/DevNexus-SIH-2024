@@ -321,3 +321,29 @@ footer {
     padding-bottom: 10px;
     display: inline-block;
 }
+.sign-up-section {
+    display: flex;
+    justify-content:center ;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.sign-up-btn {
+    display: inline-block;
+    
+    background-color: #a594f9; /* Matching the background color of the services section */
+    color: white; /* Matching text color */
+    padding: 40px 80px; /* Adjust padding to match services section design */
+    font-size: 40px;
+    font-weight: 600; /* Same font weight as services */
+    
+    border-radius: 8px;
+    text-decoration: none;
+
+}
+
+.sign-up-btn:hover {
+    background-color: #e5d9f2; /* Lighter hover background to match hover effects in services */
+    transform: translateY(-5px); /* Lift effect similar to the flex items */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
