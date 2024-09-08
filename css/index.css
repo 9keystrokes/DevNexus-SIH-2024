@@ -99,7 +99,7 @@ nav {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1001;
     text-align: left;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
     width: 90vw;
     max-width :600px;
@@ -140,6 +140,8 @@ nav {
     text-align: center;
     margin: 20px 0;
 }
+
+
 
 .image-container img {
     width: 100%;
@@ -253,6 +255,8 @@ footer {
     font-size: 20px;
     margin: 0 10px;
     transition: color 0.3s ease;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 .social-media a:hover {
@@ -276,7 +280,7 @@ footer {
 }
 
 .quick-links a:hover {
-    text-decoration: underline;
+    text-decoration:underline;
 }
 
 footer p {
