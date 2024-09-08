@@ -8,28 +8,35 @@ mongoose.connect('mongodb+srv://1nayanmandal:mongoatlas@login-backend.orqrz.mong
   useUnifiedTopology: true
 });
 
-const user = require('./users_schema');
+const User = require('./users_schema');
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
+  console.log('Login attempt:', { username, password });
 
-  const user = await User.findOne({ username });
+  try {
+    const user = await User.findOne({ username });
+    console.log('User found:', user);
+    if (!user) {
+      return res.status(401).send({ message: 'User does not exist.' });
+    }
 
-  if (!user) {
-    return res.status(401).send({ message: 'Invalid username or password' });
+    const isValidPassword = await bcrypt.compare(password, user.password);
+    console.log('Password valid:', isValidPassword);
+    if (!isValidPassword) {
+      return res.status(401).send({ message: 'Invalid password' });
+    }
+
+    return res.send({ message: 'Login successful' });
   }
 
-  const isValidPassword = await bcrypt.compare(password, user.password);
-
-  if (!isValidPassword) {
-    res.render('login', { error: 'Invalid username or password' });
-  } else {
-    res.send({ message: 'Login successful' });
+  catch (error){
+    console.error('Error during login:', error);
+    return res.status(500).send({ message: 'An error occurred. Please try again later.' });
   }
-
-  res.send({ message: 'Login successful' });
 });
 
 const port = 3000;
