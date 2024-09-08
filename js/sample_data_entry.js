@@ -1,4 +1,4 @@
-const express = require('express');
+ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
@@ -21,8 +21,9 @@ const createUser = async (name, email, username, password) => {
   }
 };
 
-createUser('Vashu Parashar', 'bt22csd021@iiitn.ac.in', 'vasu21', 'vasupw');
-createUser('Nayan  Mandal', 'bt22csd035@iiitn.ac.in', 'nayan35', 'nayanpw');
-createUser('Anuj Singh', 'bt22csd021@iiitn.ac.in', 'vasu21', 'vasupsw');
-createUser('Vashu Parashar', 'bt22csd021@iiitn.ac.in', 'vasu21', 'vasupsw');
-createUser('Vashu Parashar', 'bt22csd021@iiitn.ac.in', 'vasu21', 'vasupsw');
+createUser('Vashu Parashar', 'bt22csd021@iiitn.ac.in', 'vasu021', 'vasupw');
+createUser('Nayan  Mandal', 'bt22csd035@iiitn.ac.in', 'nayan035', 'nayanpw');
+createUser('Anuj Singh', 'bt22cse113@iiitn.ac.in', 'anuj113', 'anujpw');
+createUser('Parth Chatter', 'bt22cse109@iiitn.ac.in', 'parth109', 'parthpw');
+createUser('Ankush Jha', 'bt22csh023@iiitn.ac.in', 'ankush023', 'ankushpw');
+createUser('Darshika Saxena', 'bt22cse088@iiitn.ac.in', 'darshika088', 'darshikapw');
