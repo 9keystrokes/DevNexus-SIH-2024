@@ -2,47 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlumConnect - Login</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/login.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlumConnect - Login</title>
+  <!-- Google Fonts link for Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
-    <div class="split left">
-        <div class="centered image-container">
-            <img src="/img/alum_connect_logo.png" alt="">
-        </div>
+  <div class="split left">
+    <div class="centered image-container">
+      <img src="/img/alum_connect_logo.png" alt="">
     </div>
-    <div class="split right">
-        <div class="centered">
+  </div>
+  <div class="split right">
+    <div class="centered">
 
-            <form action="http://localhost:3000/login" method="post">
-                <div class="imgcontainer">
-                    <img src="/img/generic_user.png" alt="Avatar" class="avatar">
-                </div>
-                <div class="container">
-                    <label for="username">Username</label>
-                    <input type="text" placeholder="Enter Username" name="username" required>
+      <form action="http://localhost:3000/login" method="post">
+        <div class="imgcontainer">
+          <img src="/img/generic_user.png" alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+          <label for="username">Username</label>
+          <input type="text" placeholder="Enter Username" name="username" required>
+
+          <label for="password">Password</label>
+          <input type="password" placeholder="Enter Password" name="password" required>
+
+          <button type="submit">Sign In</button>
+          <label>
+            <input type="checkbox" name="remember" checked="checked"> Remember me
+          </label>
+        </div>
+
+        <div class="container" id="forgot_pw">
+            <a href="javascript:void(0);" id="forgotPassword">Forgot password?</a>
+        </div>
     
-                    <label for="password">Password</label>
-                    <input type="password" placeholder="Enter Password" name="password" required>
+        <div id="customPopup">
+            <p>Contact your college admin for password change.</p>
+            <button onclick="closePopup()">OK</button>
+        </div>
     
-                    <button type="submit">Sign In</button>
-                    <label>
-                        <input type="checkbox" name="remember" checked="checked"> Remember me
-                    </label>
-                </div>
+        <script>
+            function showPopup() {
+                document.getElementById('customPopup').style.display = 'block';
+            }
     
-                <div class="container" style="background-color: #f1f1f1;">
-                    <a href="#">Forgot password?</a>
-                </div>
-                <div id="error-message"></div>
-            </form>
-        </div>      
-    </div>
-    <script src="./js/login_error.js"></script>
+            function closePopup() {
+                document.getElementById('customPopup').style.display = 'none';
+            }
+    
+            document.getElementById('forgotPassword').addEventListener('click', function(e) {
+                e.preventDefault();
+                showPopup();
+            });
+        </script>
+        <div id="error-message"></div>
+      </form>
+    </div>      
+  </div>
+  <script src="./js/login_error.js"></script>
 </body>
 
 </html>
