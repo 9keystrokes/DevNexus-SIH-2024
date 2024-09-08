@@ -8,12 +8,12 @@ mongoose.connect('mongodb+srv://1nayanmandal:mongoatlas@login-backend.orqrz.mong
   useUnifiedTopology: true
 });
 
-const User = require('./users');
+const User = require('./users_schema');
 
 const createUser = async (name, email, username, password) => {
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
-    const user = new User({ name, email, username, password: hashedPassword });
+    const user = new User({ name, email, username, hashedPassword });
     await user.save();
     console.log('User created successfully');
   } catch (err) {
@@ -21,4 +21,8 @@ const createUser = async (name, email, username, password) => {
   }
 };
 
-createUser('John Doe', 'johndoe2@example.com', 'john_doe2', 'password123');
+createUser('Vashu Parashar', 'bt22csd021@iiitn.ac.in', 'vasu21', 'vasupw');
+createUser('Nayan  Mandal', 'bt22csd035@iiitn.ac.in', 'nayan35', 'nayanpw');
+createUser('Anuj Singh', 'bt22csd021@iiitn.ac.in', 'vasu21', 'vasupsw');
+createUser('Vashu Parashar', 'bt22csd021@iiitn.ac.in', 'vasu21', 'vasupsw');
+createUser('Vashu Parashar', 'bt22csd021@iiitn.ac.in', 'vasu21', 'vasupsw');
