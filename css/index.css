@@ -198,12 +198,12 @@ nav {
 .description {
     flex: 1;
     color: black;
-    padding: 20px;
+    padding:30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    font-weight: 500;
+    text-align: left;
+    font-weight: 800;
 }
 
 /* Footer Styling */
@@ -353,5 +353,32 @@ footer p {
     .button-container {
         flex-wrap: wrap; /* Ensure buttons wrap on very small screens */
         gap: 5px;
+    }
+}
+/* Additional CSS for Responsiveness */
+
+/* Image Styles */
+.image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    margin: auto; /* Center horizontally */
+}
+
+/* Media Queries for Further Responsiveness */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .flex-item {
+        padding: 20px; /* Add padding for better spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .image {
+        height: 150px; /* Adjust image height on smaller screens */
     }
 }
