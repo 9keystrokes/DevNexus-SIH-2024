@@ -86,8 +86,8 @@ nav {
     font-size: 14px;
     font-weight: 400;
     width: 90vw;
-    max-width: 600px;
-    max-height: 300px;
+    max-width :600px;
+    max-height: 100px;
     overflow-y: auto;
     word-wrap: break-word;
     white-space: normal;
@@ -176,13 +176,9 @@ nav {
     flex: 1;
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
     height: 200px;
-    transition: box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.image:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Trusted Institutions Section */
@@ -229,7 +225,7 @@ footer {
 
 .footer-content p {
     margin: 5px 0;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .social-media {
