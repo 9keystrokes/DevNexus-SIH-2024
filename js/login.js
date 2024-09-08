@@ -10,11 +10,12 @@ mongoose.connect('mongodb+srv://1nayanmandal:mongoatlas@login-backend.orqrz.mong
 
 const User = require('./users_schema');
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).send({ message: 'Only POST requests are allowed' });
+  }
 
-app.post('/login', async (req, res) => {
-  
+  {
   const { username, password } = req.body;
 
     const user = await User.findOne({ username });
@@ -28,9 +29,5 @@ app.post('/login', async (req, res) => {
     }
 
     return res.send({ message: 'Login successful' });
-});
-
-const port = 3000;
-app.listen(port, () => {
-  console.log(`Server started on port ${port}`);
-});
+  }
+}
